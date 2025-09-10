@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Homepage Images -->
+  <url>
+    <loc>https://ajinkyacreatiion.com/</loc>
+    <image:image>
+      <image:loc>https://ajinkyacreatiion.com/ACPL.webp</image:loc>
+      <image:title>Ajinkya Creatiion Private Limited Logo</image:title>
+      <image:caption>ACPL company logo representing e-learning and training solutions</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ajinkyacreatiion.com/KontentCreate.webp</image:loc>
+      <image:title>KontentCreate Division Logo</image:title>
+      <image:caption>KontentCreate division specializing in video content creation and e-learning</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ajinkyacreatiion.com/VIRA.webp</image:loc>
+      <image:title>VIRA Division Logo</image:title>
+      <image:caption>VIRA division focusing on AR/VR content and immersive training experiences</image:caption>
+    </image:image>
+  </url>
+
+  <!-- About Page Images -->
+  <url>
+    <loc>https://ajinkyacreatiion.com/about</loc>
+    <image:image>
+      <image:loc>https://ajinkyacreatiion.com/Ajinkya-Deshmukh.webp</image:loc>
+      <image:title>Ajinkya Deshmukh - Founder and CEO</image:title>
+      <image:caption>Ajinkya Deshmukh, Founder and CEO of Ajinkya Creatiion Private Limited</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ajinkyacreatiion.com/Ruturaj-Kale.webp</image:loc>
+      <image:title>Ruturaj Kale - Co-Founder and CTO</image:title>
+      <image:caption>Ruturaj Kale, Co-Founder and Chief Technology Officer</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ajinkyacreatiion.com/Hrishikesh-Mohite.webp</image:loc>
+      <image:title>Hrishikesh Mohite - Co-Founder and COO</image:title>
+      <image:caption>Hrishikesh Mohite, Co-Founder and Chief Operating Officer</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ajinkyacreatiion.com/Venus.webp</image:loc>
+      <image:title>Venus - AI Assistant</image:title>
+      <image:caption>Venus, the AI-powered virtual assistant for customer support and guidance</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Services Page Images -->
+  <url>
+    <loc>https://ajinkyacreatiion.com/services</loc>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&amp;h=450&amp;fit=crop&amp;crop=center</image:loc>
+      <image:title>E-Learning Video Content Creation</image:title>
+      <image:caption>Professional video production setup for e-learning content creation</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&amp;h=450&amp;fit=crop&amp;crop=center</image:loc>
+      <image:title>Interactive E-Learning Development</image:title>
+      <image:caption>Students collaborating on interactive e-learning platform</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&amp;h=450&amp;fit=crop&amp;crop=center</image:loc>
+      <image:title>Corporate Training Solutions</image:title>
+      <image:caption>Professional corporate training session in modern conference room</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1592478411213-6153e4ebc696?w=800&amp;h=450&amp;fit=crop&amp;crop=center</image:loc>
+      <image:title>360° AR/VR Training Experience</image:title>
+      <image:caption>Person wearing VR headset experiencing immersive training simulation</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&amp;h=450&amp;fit=crop&amp;crop=center</image:loc>
+      <image:title>Website Development Process</image:title>
+      <image:caption>Web developer working on responsive website design</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&amp;h=450&amp;fit=crop&amp;crop=center</image:loc>
+      <image:title>Custom Software Development</image:title>
+      <image:caption>Software development workspace with multiple monitors</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?w=800&amp;h=450&amp;fit=crop&amp;crop=center</image:loc>
+      <image:title>360° VR Training Environment</image:title>
+      <image:caption>Immersive VR training environment with interactive elements</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Contact Page Images -->
+  <url>
+    <loc>https://ajinkyacreatiion.com/contact</loc>
+    <image:image>
+      <image:loc>https://ajinkyacreatiion.com/ACPL.webp</image:loc>
+      <image:title>ACPL Contact Information</image:title>
+      <image:caption>Contact Ajinkya Creatiion for e-learning solutions and training services</image:caption>
+    </image:image>
+  </url>
+
+</urlset>

@@ -1,0 +1,36 @@
+# Robots.txt for ACPL Website
+# Ajinkya Creatiion Private Limited
+# Traditional website - not a Progressive Web App
+
+User-agent: *
+Allow: /
+
+# Block PWA-related files
+Disallow: /manifest.json
+Disallow: /manifest.webmanifest
+Disallow: /sw.js
+Disallow: /service-worker.js
+Disallow: /serviceworker.js
+Disallow: /*.webmanifest$
+Disallow: /*manifest*.json$
+
+# Allow standard website files
+Allow: /index.html
+Allow: /contact-form-handler.php
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.ico$
+Allow: /*.woff$
+Allow: /*.woff2$
+Allow: /*.ttf$
+
+# Sitemap
+Sitemap: https://ajinkyacreatiion.com/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 1

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Canonical domain: ajinkyacreatiion.com (non-www preferred) -->
+  <!-- Main Pages Sitemap -->
+  <sitemap>
+    <loc>https://ajinkyacreatiion.com/pages-sitemap.xml</loc>
+    <lastmod>2025-01-27</lastmod>
+  </sitemap>
+
+  <!-- Images Sitemap -->
+  <sitemap>
+    <loc>https://ajinkyacreatiion.com/image-sitemap.xml</loc>
+    <lastmod>2025-01-27</lastmod>
+  </sitemap>
+
+</sitemapindex>

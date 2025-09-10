@@ -1,0 +1,231 @@
+# ACPL Website - Hostinger Production Configuration
+# Ajinkya Creatiion Private Limited
+# Optimized for React SPA with React Router
+
+# Enable URL Rewriting
+RewriteEngine On
+
+# Security Headers
+<IfModule mod_headers.c>
+    # Prevent clickjacking
+    Header always append X-Frame-Options SAMEORIGIN
+
+    # XSS Protection
+    Header set X-XSS-Protection "1; mode=block"
+
+    # Prevent MIME type sniffing
+    Header set X-Content-Type-Options nosniff
+
+    # Referrer Policy
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # Content Security Policy (adjust as needed)
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://maps.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https:; frame-src 'self' https://www.google.com https://maps.google.com;"
+
+    # Prevent PWA Installation Prompts
+    Header set X-Robots-Tag "noindex, nofollow" env=manifest_request
+    Header unset X-Robots-Tag
+
+    # Disable PWA features
+    Header set Cache-Control "no-store, no-cache, must-revalidate" env=manifest_request
+    Header unset Cache-Control env=!manifest_request
+</IfModule>
+
+# HTTPS Redirect (Force SSL)
+<IfModule mod_rewrite.c>
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# Canonical Domain Handling - Redirect www to non-www
+# This ensures consistent canonical URLs for SEO
+<IfModule mod_rewrite.c>
+    RewriteCond %{HTTP_HOST} ^www\.ajinkyacreatiion\.com [NC]
+    RewriteRule ^(.*)$ https://ajinkyacreatiion.com/$1 [R=301,L]
+</IfModule>
+
+# React Router SPA Configuration
+# Handle client-side routing - redirect all requests to index.html
+<IfModule mod_rewrite.c>
+    # Handle Angular and React Router
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} !^/(api|contact-form-handler\.php)
+    RewriteRule . /index.html [L]
+</IfModule>
+
+# Cache Control for Static Assets
+<IfModule mod_expires.c>
+    ExpiresActive On
+
+    # Images
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/ico "access plus 1 year"
+    ExpiresByType image/icon "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+
+    # CSS and JavaScript
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType text/javascript "access plus 1 year"
+
+    # Fonts
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType application/font-woff "access plus 1 year"
+    ExpiresByType application/font-woff2 "access plus 1 year"
+    ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
+    ExpiresByType font/opentype "access plus 1 year"
+    ExpiresByType application/x-font-ttf "access plus 1 year"
+
+    # HTML
+    ExpiresByType text/html "access plus 0 seconds"
+
+    # Data
+    ExpiresByType application/json "access plus 0 seconds"
+    ExpiresByType application/xml "access plus 0 seconds"
+    ExpiresByType text/xml "access plus 0 seconds"
+</IfModule>
+
+# Gzip Compression
+<IfModule mod_deflate.c>
+    # Compress HTML, CSS, JavaScript, Text, XML and fonts
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+    AddOutputFilterByType DEFLATE application/x-font
+    AddOutputFilterByType DEFLATE application/x-font-opentype
+    AddOutputFilterByType DEFLATE application/x-font-otf
+    AddOutputFilterByType DEFLATE application/x-font-truetype
+    AddOutputFilterByType DEFLATE application/x-font-ttf
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE font/opentype
+    AddOutputFilterByType DEFLATE font/otf
+    AddOutputFilterByType DEFLATE font/ttf
+    AddOutputFilterByType DEFLATE image/svg+xml
+    AddOutputFilterByType DEFLATE image/x-icon
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/xml
+
+    # Remove browser bugs (only needed for really old browsers)
+    BrowserMatch ^Mozilla/4 gzip-only-text/html
+    BrowserMatch ^Mozilla/4\.0[678] no-gzip
+    BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+    Header append Vary User-Agent
+</IfModule>
+
+# File Access Security
+# Deny access to sensitive files
+<Files ~ "^\.">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Protect PHP files (except contact form handler)
+<FilesMatch "\.php$">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
+
+# Allow access to contact form handler
+<Files "contact-form-handler.php">
+    Order Allow,Deny
+    Allow from all
+</Files>
+
+# Prevent access to source maps in production
+<FilesMatch "\.map$">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
+
+# Block access to common sensitive files
+<FilesMatch "(^#.*#|\.(bak|config|dist|fla|inc|ini|log|psd|sh|sql|sw[op])|~)$">
+    Order allow,deny
+    Deny from all
+    Satisfy All
+</FilesMatch>
+
+# Block PWA-related files
+<FilesMatch "\.(webmanifest|manifest\.json)$">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
+
+# Block service workers
+<FilesMatch "^(sw|service-worker|serviceworker).*\.js$">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
+
+# Prevent PWA manifest requests
+<Files "manifest.json">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+<Files "manifest.webmanifest">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+# Custom Error Pages (optional)
+ErrorDocument 404 /index.html
+ErrorDocument 403 /index.html
+ErrorDocument 500 /index.html
+
+# MIME Types for modern web assets
+<IfModule mod_mime.c>
+    # Web fonts
+    AddType application/font-woff2 .woff2
+    AddType application/font-woff .woff
+    AddType application/vnd.ms-fontobject .eot
+    AddType font/opentype .otf
+    AddType application/x-font-ttf .ttf
+
+    # Web app manifest - DISABLED to prevent PWA installation
+    # AddType application/manifest+json .webmanifest
+    # AddType application/x-web-app-manifest+json .webapp
+
+    # Media files
+    AddType video/mp4 .mp4
+    AddType video/webm .webm
+    AddType image/webp .webp
+
+    # Data files
+    AddType application/json .json
+    AddType application/ld+json .jsonld
+</IfModule>
+
+# Performance Optimizations
+<IfModule mod_headers.c>
+    # Cache static assets
+    <FilesMatch "\.(css|js|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+
+    # Don't cache HTML files
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expires 0
+    </FilesMatch>
+</IfModule>
+
+# Hostinger Specific Optimizations
+# Enable Keep-Alive
+<IfModule mod_headers.c>
+    Header set Connection keep-alive
+</IfModule>
+
+# End of .htaccess file
