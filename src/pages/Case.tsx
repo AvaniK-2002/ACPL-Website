@@ -53,11 +53,10 @@ const CaseStudy = () => {
             />
             <div className="p-5">
               <h2 className="text-xl font-semibold text-gray-900 mb-2 hover:text-blue-600 cursor-pointer">
-                AI Transforming Business Operations
+                Challenge: The business obstacle faced
               </h2>
               <p className="text-gray-600 text-sm">
-                See how predictive analytics and intelligent automation improved
-                efficiency for global enterprises.
+                Low learner engagement and high churn.
               </p>
             </div>
           </div>
@@ -71,11 +70,10 @@ const CaseStudy = () => {
             />
             <div className="p-5">
               <h2 className="text-xl font-semibold text-gray-900 mb-2 hover:text-blue-600 cursor-pointer">
-                SaaS Innovations Driving Growth
+                Solution: How our technology or AI-driven product solved it.
               </h2>
               <p className="text-gray-600 text-sm">
-                Learn how SaaS platforms empowered businesses with flexibility
-                and scalability.
+                Implemented AI-driven personalized learning modules.
               </p>
             </div>
           </div>
@@ -89,11 +87,10 @@ const CaseStudy = () => {
             />
             <div className="p-5">
               <h2 className="text-xl font-semibold text-gray-900 mb-2 hover:text-blue-600 cursor-pointer">
-                Cutting Costs with Automation
+                Results: Measurable impact with real data
               </h2>
               <p className="text-gray-600 text-sm">
-                Discover how automation saved time and reduced costs across
-                multiple industries.
+                45% increase in retention and 60% boost in user engagement.
               </p>
             </div>
           </div>

@@ -20,49 +20,46 @@ function StrategyPlanning() {
     {
       number: "02",
       title: "Cross-Platform Compatibility",
-      description:
-        "Works seamlessly across Web, Mobile, and Desktop.",
+      description: "Works seamlessly across Web, Mobile, and Desktop.",
       isActive: false,
     },
     {
       number: "03",
       title: "Flexible Subscription Models",
-      description:
-        "Scalable plans designed to fit every business size.",
+      description: "Scalable plans designed to fit every business size.",
       isActive: false,
     },
     {
       number: "04",
       title: "Security & Performance",
-      description:
-        "Reliable, secure, and optimized for high performance.",
+      description: "Reliable, secure, and optimized for high performance.",
       isActive: false,
     },
   ];
 
   const images = [
     {
-      src: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600",
+      src: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1200",
       alt: "Business meeting and strategy planning",
       caption: "Strategic Planning Session",
     },
     {
-      src: "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=600",
+      src: "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1200",
       alt: "Team collaboration",
       caption: "Team Collaboration",
     },
     {
-      src: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600",
+      src: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200",
       alt: "Business analysis",
       caption: "Data Analysis",
     },
     {
-      src: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=600",
+      src: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1200",
       alt: "Innovation workshop",
       caption: "Innovation Workshop",
     },
     {
-      src: "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=600",
+      src: "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=1200",
       alt: "Executive meeting",
       caption: "Executive Meeting",
     },
@@ -87,7 +84,7 @@ function StrategyPlanning() {
         className="relative bg-cover bg-center text-white py-16"
         style={{ backgroundImage: `url(${bgImage})` }}
       >
-        <div className="absolute inset-0  bg-opacity-40"></div>
+        <div className="absolute inset-0 "></div>
         <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
           {/* Breadcrumb */}
           <div className="mb-6 text-white">
@@ -98,7 +95,7 @@ function StrategyPlanning() {
               ]}
             />
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">SaaS Products </h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">SaaS Products</h1>
           <p className="text-lg md:text-xl opacity-90">
             Scalable SaaS Platforms Built for the Future.
           </p>
@@ -108,42 +105,39 @@ function StrategyPlanning() {
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
-          {/* Left Column */}
-          <div className="space-y-8">
-            {/* Animated Photo Album */}
-            <div className="relative h-96 w-full">
-              {images.map((image, index) => {
-                const isActive = index === current;
-                const randomRotation = (index % 2 === 0 ? 6 : -6) * (index + 1);
+          {/* Left Column - Large Animated Photo Album */}
+          <div className="relative h-[500px] w-full">
+            {images.map((image, index) => {
+              const isActive = index === current;
+              const randomRotation = (index % 2 === 0 ? 4 : -4) * (index + 1);
 
-                return (
-                  <motion.div
-                    key={index}
-                    className="absolute top-0 left-0 w-full h-full flex items-center justify-center"
-                    style={{ zIndex: isActive ? 20 : 10 }}
-                    initial={{ opacity: 0, scale: 0.9, rotate: randomRotation }}
-                    animate={{
-                      opacity: isActive ? 1 : 0.4,
-                      scale: isActive ? 1 : 0.95,
-                      rotate: isActive ? 0 : randomRotation,
-                      y: isActive ? 0 : 20,
-                    }}
-                    transition={{ duration: 0.8 }}
-                  >
-                    <div className="bg-white p-2 rounded-lg shadow-lg">
-                      <img
-                        src={image.src}
-                        alt={image.alt}
-                        className="w-72 h-52 object-cover rounded-md"
-                      />
-                      <p className="text-center text-sm text-gray-600 mt-2">
-                        {image.caption}
-                      </p>
+              return (
+                <motion.div
+                  key={index}
+                  className="absolute inset-0 flex items-center justify-center"
+                  style={{ zIndex: isActive ? 20 : 10 }}
+                  initial={{ opacity: 0, scale: 0.95, rotate: randomRotation }}
+                  animate={{
+                    opacity: isActive ? 1 : 0,
+                    scale: isActive ? 1 : 0.98,
+                    rotate: isActive ? 0 : randomRotation,
+                    y: isActive ? 0 : 30,
+                  }}
+                  transition={{ duration: 0.8 }}
+                >
+                  <div className="relative w-full h-full rounded-xl overflow-hidden shadow-2xl">
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute bottom-0 left-0 w-full bg-black/50 text-white text-center text-sm py-2">
+                      {image.caption}
                     </div>
-                  </motion.div>
-                );
-              })}
-            </div>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
 
           {/* Right Column - Services */}
