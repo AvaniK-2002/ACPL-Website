@@ -8,7 +8,7 @@ import Button from '../components/ui/Button';
 import { FadeIn, StaggerContainer, StaggerItem } from '../components/ui/animations';
 import GoogleMap from '../components/contact/GoogleMap';
 import Breadcrumb from '../components/ui/Breadcrumb';
-import bgImage from "../assets/images/bg.jpeg";
+import bgImage from '../assets/images/bg.jpeg'
 
 const Contact = () => {
 
@@ -339,15 +339,14 @@ const Contact = () => {
       {/* Hero Section */}
       <section
   className="relative min-h-[200px] pt-6 pb-20 text-white bg-cover bg-center"
-  style={{ backgroundImage: `url(${bgImage})` }}
+  style={{ backgroundImage: `url(${bgImage})`}}
 >
-
-  <div className="absolute inset-0" />
+  <div className="absolute inset-0 " />
   <div className="relative container">
     <Breadcrumb className="text-white/90" />
     <div className="max-w-2xl mx-auto text-center">
       <h1 className="mb-6 text-4xl font-bold md:text-5xl">Contact Us</h1>
-      <p className="text-xl">Let’s Build the Future Together</p>
+      <p className="text-xl"></p>
     </div>
   </div>
 </section>

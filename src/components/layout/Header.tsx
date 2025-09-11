@@ -270,17 +270,17 @@ const Header = () => {
                     className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-white border border-gray-200 rounded-md shadow-lg w-48 py-2 z-50"
                   >
                     <li>
-                      <Link className="block px-4 py-2 hover:bg-gray-100" to="/services/web">
+                      <Link className="block px-4 py-2 hover:bg-gray-100" to="/Ai">
                         AI Solutions
                       </Link>
                     </li>
                     <li>
-                      <Link className="block px-4 py-2 hover:bg-gray-100" to="/services/mobile">
+                      <Link className="block px-4 py-2 hover:bg-gray-100" to="/Sass">
                        Sass Products
                       </Link>
                     </li>
                     <li>
-                      <Link className="block px-4 py-2 hover:bg-gray-100" to="/services/seo">
+                      <Link className="block px-4 py-2 hover:bg-gray-100" to="/Case">
                         Case Studies 
                       </Link>
                     </li>

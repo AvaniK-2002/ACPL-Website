@@ -420,7 +420,7 @@ const Home = () => {
             <h4 className="font-semibold">KontentCreate</h4>
             <p className="text-sm text-gray-500">Video Content Creation</p>
           </div>
-          <p className="text-gray-600">
+          <p className="text-gray-600 ">
             Specializing in high-quality video content creation services, including interactive
             e-learning videos, microlearnings, compliance training, and SCORM-compliant courses.
             Our team ensures quick project delivery with exceptional quality.

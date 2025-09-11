@@ -1245,13 +1245,18 @@ const Services = () => {
               className="inline-block"
             >
               <Link to="/contact">
-                <Button variant="secondary" size="lg">
-                  Contact Us Now
-                </Button>
-              </Link>
+  <Button
+    variant="secondary"
+    size="lg"
+    className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 transition-colors duration-300"
+  >
+    Contact Us Now
+  </Button>
+</Link>
+
             </motion.div>
           </div>
-        </FadeIn>
+        </FadeIn> 
       </Section>
 
     </Layout>
