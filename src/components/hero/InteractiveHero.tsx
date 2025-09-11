@@ -1,5 +1,5 @@
 
-import { ArrowRight,  Sparkles, Brain, Rocket } from 'lucide-react';
+import { ArrowRight,  Sparkles, Brain, Rocket, Star } from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -10,7 +10,7 @@ const Hero = () => {
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-200/30 rounded-full blur-3xl"></div>
       
       <div className="relative max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-1 items-center">
           {/* Left Column - Content */}
           <div className="text-center lg:text-left">
             
@@ -54,6 +54,9 @@ const Hero = () => {
                 </div>
                 <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center shadow-lg animate-bounce" style={{ animationDelay: '1s' }}>
                   <Sparkles size={20} className="text-white" />
+                </div>
+                <div className="absolute -bottom-6 -right-6 w-10 h-10 bg-gradient-to-r from-blue-400 to-indigo-600 rounded-full flex items-center justify-center shadow-lg animate-bounce" style={{ animationDelay: '1.5s' }}>
+                  <Star size={18} className="text-white" />
                 </div>
                 <div className="absolute top-1/2 -left-8 w-8 h-8 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full shadow-lg animate-ping"></div>
                 <div className="absolute top-1/4 -right-8 w-6 h-6 bg-gradient-to-r from-green-400 to-teal-500 rounded-full shadow-lg animate-ping" style={{ animationDelay: '0.5s' }}></div>

@@ -8,6 +8,7 @@ import Button from '../components/ui/Button';
 import { FadeIn, StaggerContainer, StaggerItem } from '../components/ui/animations';
 import GoogleMap from '../components/contact/GoogleMap';
 import Breadcrumb from '../components/ui/Breadcrumb';
+import bgImage from "../assets/images/bg.jpeg";
 
 const Contact = () => {
 
@@ -16,7 +17,7 @@ const Contact = () => {
     name: '',
     email: '',
     phone: '',
-    subject: '',
+    company: '',
     message: '',
   });
 
@@ -25,7 +26,7 @@ const Contact = () => {
     name: '',
     email: '',
     phone: '',
-    subject: '',
+    company: '',
     message: '',
   });
 
@@ -42,7 +43,7 @@ const Contact = () => {
     name: false,
     email: false,
     phone: false,
-    subject: false,
+    company: false,
     message: false,
   });
 
@@ -80,11 +81,11 @@ const Contact = () => {
     }
 
     // Validate subject
-    if (!formData.subject) {
-      newErrors.subject = 'Please select a subject';
+    if (!formData.company) {
+      newErrors.company = 'Please select a subject';
       valid = false;
     } else {
-      newErrors.subject = '';
+      newErrors.company = '';
     }
 
     // Validate message
@@ -141,7 +142,7 @@ const Contact = () => {
           newErrors.phone = '';
         }
       } else if (name === 'subject') {
-        newErrors.subject = !value ? 'Please select a subject' : '';
+        newErrors.company = !value ? 'Please select a subject' : '';
       } else if (name === 'message') {
         if (!value.trim()) {
           newErrors.message = 'Message is required';
@@ -203,7 +204,7 @@ const Contact = () => {
         name: '',
         email: '',
         phone: '',
-        subject: '',
+        company: '',
         message: '',
       });
 
@@ -211,7 +212,7 @@ const Contact = () => {
         name: '',
         email: '',
         phone: '',
-        subject: '',
+        company: '',
         message: '',
       });
 
@@ -219,7 +220,7 @@ const Contact = () => {
         name: false,
         email: false,
         phone: false,
-        subject: false,
+        company: false,
         message: false,
       });
     } catch (error) {
@@ -336,19 +337,20 @@ const Contact = () => {
       structuredData={contactStructuredData}
     >
       {/* Hero Section */}
-      <section className="relative pt-6 pb-20 bg-dark text-white">
-        <div className="container">
-          <Breadcrumb className="text-white/90" />
-          <div className="max-w-2xl mx-auto text-center">
-            <FadeIn>
-              <h1 className="mb-6 text-4xl font-bold md:text-5xl">Contact Us</h1>
-              <p className="text-xl">
-                Get in touch with us to discuss your learning and training needs.
-              </p>
-            </FadeIn>
-          </div>
-        </div>
-      </section>
+      <section
+  className="relative min-h-[200px] pt-6 pb-20 text-white bg-cover bg-center"
+  style={{ backgroundImage: `url(${bgImage})` }}
+>
+
+  <div className="absolute inset-0" />
+  <div className="relative container">
+    <Breadcrumb className="text-white/90" />
+    <div className="max-w-2xl mx-auto text-center">
+      <h1 className="mb-6 text-4xl font-bold md:text-5xl">Contact Us</h1>
+      <p className="text-xl">Let’s Build the Future Together</p>
+    </div>
+  </div>
+</section>
 
       {/* Contact Form Section */}
       <Section>
@@ -456,41 +458,35 @@ const Contact = () => {
 
                 {/* Subject */}
                 <div>
-                  <label
-                    htmlFor="subject"
-                    className="block mb-2 text-sm font-medium text-gray-700"
-                  >
-                    Subject *
-                  </label>
-                  <select
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    required
-                    className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary transition-colors ${
-                      touched.subject && formErrors.subject ? 'border-red-500' : 'border-gray-300'
-                    }`}
-                  >
-                    <option value="">Select a subject</option>
-                    <option value="E-Learning Video Content">E-Learning Video Content</option>
-                    <option value="Interactive E-Learning">Interactive E-Learning</option>
-                    <option value="Corporate Training Solutions">Corporate Training Solutions</option>
-                    <option value="360° AR/VR Content">360° AR/VR Content</option>
-                    <option value="SCORM Authoring Tools">SCORM Authoring Tools</option>
-                    <option value="Other">Other</option>
-                  </select>
-                  {touched.subject && formErrors.subject && (
-                    <motion.p
-                      initial={{ opacity: 0, y: -10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      className="mt-1 text-sm text-red-500"
-                    >
-                      {formErrors.subject}
-                    </motion.p>
-                  )}
-                </div>
+  <label
+    htmlFor="company"
+    className="block mb-2 text-sm font-medium text-gray-700"
+  >
+    Company *
+  </label>
+  <input
+    type="text"
+    id="company"
+    name="company"
+    value={formData.company}
+    onChange={handleChange}
+    onBlur={handleBlur}
+    required
+    className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary transition-colors ${
+      touched.company && formErrors.company ? 'border-red-500' : 'border-gray-300'
+    }`}
+  />
+  {touched.company && formErrors.company && (
+    <motion.p
+      initial={{ opacity: 0, y: -10 }}
+      animate={{ opacity: 1, y: 0 }}
+      className="mt-1 text-sm text-red-500"
+    >
+      {formErrors.company}
+    </motion.p>
+  )}
+</div>
+
 
                 {/* Message */}
                 <div>
@@ -525,20 +521,21 @@ const Contact = () => {
 
                 {/* Submit Button */}
                 <div>
-                  <motion.div
-                    whileHover={{ scale: formStatus.isSubmitting ? 1 : 1.02 }}
-                    whileTap={{ scale: formStatus.isSubmitting ? 1 : 0.98 }}
-                  >
-                    <Button
-                      type="submit"
-                      variant="primary"
-                      fullWidth
-                      disabled={formStatus.isSubmitting}
-                    >
-                      {formStatus.isSubmitting ? 'Sending...' : 'Send Message'}
-                    </Button>
-                  </motion.div>
-                </div>
+  <motion.div
+    whileHover={{ scale: formStatus.isSubmitting ? 1 : 1.02 }}
+    whileTap={{ scale: formStatus.isSubmitting ? 1 : 0.98 }}
+  >
+    <Button
+      type="submit"
+      fullWidth
+      disabled={formStatus.isSubmitting}
+      className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-200"
+    >
+      {formStatus.isSubmitting ? 'Sending...' : 'Send Message'}
+    </Button>
+  </motion.div>
+</div>
+
 
                 {/* Form Status Message */}
                 {formStatus.isSubmitted && (
@@ -597,7 +594,7 @@ const Contact = () => {
                     <div className="ml-4">
                       <h3 className="text-lg font-medium">Our Office</h3>
                       <p className="mt-1 text-gray-600">
-                        Near SNBP School, Pimple Saudagar, Pune MH - 411017, IN
+                        Aundh, Pune
                       </p>
                     </div>
                   </motion.div>

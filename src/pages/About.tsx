@@ -6,6 +6,8 @@ import Breadcrumb from '../components/ui/Breadcrumb';
 import ajinkyaPhoto from '../assets/images/Ajinkya-Deshmukh.webp';
 import hrishikeshPhoto from '../assets/images/Hrishikesh-Mohite.webp';
 import ruturajPhoto from '../assets/images/Ruturaj-Kale.webp';
+import bgImage from "../assets/images/bg.jpeg";
+
 
 const About = () => {
   const teamMembers = [
@@ -122,17 +124,20 @@ const About = () => {
       structuredData={aboutStructuredData}
     >
       {/* Hero Section */}
-      <section className="relative pt-6 pb-20 bg-dark text-white">
-        <div className="container">
-          <Breadcrumb className="text-white/90" />
-          <div className="max-w-2xl mx-auto text-center">
-            <h1 className="mb-6 text-4xl font-bold md:text-5xl">About Us</h1>
-            <p className="text-xl">
-              Your Partner in AI-Driven Digital Transformation
-            </p>
-          </div>
-        </div>
-      </section>
+      <section
+  className="relative min-h-[200px] pt-6 pb-20 text-white bg-cover bg-center"
+  style={{ backgroundImage: `url(${bgImage})` }}
+>
+
+  <div className="absolute inset-0" />
+  <div className="relative container">
+    <Breadcrumb className="text-white/90" />
+    <div className="max-w-2xl mx-auto text-center">
+      <h1 className="mb-6 text-4xl font-bold md:text-5xl">About US</h1>
+      <p className="text-xl">Your Partner in AI-Driven Digital Transformation</p>
+    </div>
+  </div>
+</section>
 
       {/* Our Story Section */}
       <Section>
@@ -172,7 +177,7 @@ const About = () => {
               {/* Innovation Image */}
               <div className="relative rounded-lg overflow-hidden group">
                 <img
-                  src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400&h=300&fit=crop&crop=center"
+                  src="https://imageio.forbes.com/specials-images/imageserve/6200b0dddcf32d3be937fa84/The-5-Technologies-That-Will-Change-The-Future-Of-The-Human-Race/960x0.jpg?height=399&width=711&fit=bounds"
                   alt="Modern technology and innovation in e-learning development showcasing ACPL's technological advancement"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   loading="lazy"
@@ -188,7 +193,7 @@ const About = () => {
               {/* Growth Image */}
               <div className="relative rounded-lg overflow-hidden group">
                 <img
-                  src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=300&fit=crop&crop=center"
+                  src="https://media.licdn.com/dms/image/v2/D4D12AQEaTxXUq77Vrg/article-cover_image-shrink_720_1280/B4DZinmUCvH4AI-/0/1755158496321?e=2147483647&v=beta&t=gV0QW0DNH0UDFU9-wvivn2keS-Ru8o2Xn9qbt-UdX_Q"
                   alt="Professional training and corporate learning environment demonstrating ACPL's growth in the industry"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   loading="lazy"
@@ -204,7 +209,7 @@ const About = () => {
               {/* Future Image */}
               <div className="relative rounded-lg overflow-hidden group">
                 <img
-                  src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=300&fit=crop&crop=center"
+                  src="https://www.shutterstock.com/image-photo/robot-hand-on-virtual-screen-600nw-2411813921.jpg"
                   alt="Artificial intelligence and machine learning technology representing the future of digital education and innovation at ACPL"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   loading="lazy"

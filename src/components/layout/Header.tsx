@@ -252,9 +252,14 @@ const Header = () => {
               onMouseEnter={() => setIsServicesOpen(true)}
               onMouseLeave={() => setIsServicesOpen(false)}
             >
-              <button className="flex items-center gap-1 text-dark hover:text-primary transition-colors">
-                Services <ChevronDown className={`h-4 w-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
-              </button>
+             <Link 
+  to="/services" 
+  className="flex items-center gap-1 text-dark hover:text-primary transition-colors"
+>
+  Services 
+  <ChevronDown className={`h-4 w-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
+</Link>
+
               <AnimatePresence>
                 {isServicesOpen && (
                   <motion.ul
@@ -266,17 +271,17 @@ const Header = () => {
                   >
                     <li>
                       <Link className="block px-4 py-2 hover:bg-gray-100" to="/services/web">
-                        Web Development
+                        AI Solutions
                       </Link>
                     </li>
                     <li>
                       <Link className="block px-4 py-2 hover:bg-gray-100" to="/services/mobile">
-                        Mobile App Development
+                       Sass Products
                       </Link>
                     </li>
                     <li>
                       <Link className="block px-4 py-2 hover:bg-gray-100" to="/services/seo">
-                        SEO Services
+                        Case Studies 
                       </Link>
                     </li>
                   </motion.ul>
@@ -288,10 +293,13 @@ const Header = () => {
 
         {/* Contact Button on the Right */}
         <div className="hidden md:flex ml-auto">
-          <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2.5 rounded-full hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-200 flex items-center justify-center gap-2 font-medium">
-            Contact Us <ArrowRight size={16} />
-          </button>
-        </div>
+  <Link to="/contact">
+    <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2.5 rounded-full hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-200 flex items-center justify-center gap-2 font-medium">
+      Contact Us <ArrowRight size={16} />
+    </button>
+  </Link>
+</div>
+
 
         {/* Mobile Menu Button */}
         <motion.button

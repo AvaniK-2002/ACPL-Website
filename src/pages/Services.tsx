@@ -9,6 +9,9 @@ import Button from '../components/ui/Button';
 import Breadcrumb from '../components/ui/Breadcrumb';
 import FAQStructuredData from '../components/seo/FAQStructuredData';
 import { FadeIn } from '../components/ui/animations';
+import bgImage from "../assets/images/bg.jpeg";
+
+
 
 // Direct imports for immediate loading (no lazy loading)
 import { FuturisticModelViewer, VRTrainingDemo } from '../components/ui/Heavy3DComponents';
@@ -239,7 +242,7 @@ const ELearningPuzzleGame = () => {
       <div className="grid grid-cols-2 gap-4 h-48">
         {/* Terms (Left Side) */}
         <div className="space-y-2">
-          <h4 className="text-sm font-semibold text-gray-700 mb-2">E-Learning Technologies</h4>
+          <h4 className="text-sm font-semibold text-gray-700 mb-2">Technology & AI Solutions: </h4>
           <div className="space-y-1 overflow-y-auto h-40">
             {unmatched.map((item) => (
               <div
@@ -325,20 +328,20 @@ const ServiceThumbnail = ({ service }: ServiceThumbnailProps) => {
       alt: string;
     }> = {
       1: {
-        title: "E-Learning Video Content Creation",
-        description: "Professional video content creation with interactive elements and high production quality for educational purposes.",
+        title: "Technology & AI Solutions",
+        description: "Leverage artificial intelligence, machine learning, and data analytics to optimize operations, enhance decision-making, and unlock new opportunities.",
         thumbnail: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop&crop=center",
         alt: "Professional video production setup with cameras and lighting equipment for e-learning content creation"
       },
       2: {
-        title: "Interactive E-Learning Development",
-        description: "SCORM-compliant interactive courses with quizzes, assessments, and seamless LMS integration.",
+        title: "SaaS Product Development",
+        description: "Cloud-native, secure, and scalable platforms tailored to your business requirements.",
         thumbnail: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=450&fit=crop&crop=center",
         alt: "Students collaborating on interactive e-learning platform with digital devices and educational content"
       },
       3: {
-        title: "Corporate Training Solutions",
-        description: "Comprehensive consulting approach to learning and development implementation for organizations.",
+        title: "eLearning Solutions",
+        description: "Interactive and personalized learning platforms designed for modern learners.",
         thumbnail: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=450&fit=crop&crop=center",
         alt: "Professional corporate training session with business people in modern conference room"
       },
@@ -349,14 +352,14 @@ const ServiceThumbnail = ({ service }: ServiceThumbnailProps) => {
         alt: "Person wearing VR headset experiencing immersive virtual reality training simulation"
       },
       5: {
-        title: "Website Development Process",
-        description: "Modern website development with responsive design and cutting-edge technologies.",
+        title: "Creative & Digital Services",
+        description: "High-impact design, branding, and multimedia that align with your business objectives.",
         thumbnail: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=450&fit=crop&crop=center",
         alt: "Web developer working on responsive website design with multiple screens showing code and layouts"
       },
       6: {
-        title: "Custom Software Development",
-        description: "Custom applications, mobile apps, and enterprise software solutions tailored to your needs.",
+        title: "Process Automation",
+        description: "Reduce errors, save time, and enhance productivity with intelligent automation.",
         thumbnail: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=450&fit=crop&crop=center",
         alt: "Software development workspace with multiple monitors showing code, mobile app interfaces, and development tools"
       }
@@ -400,9 +403,7 @@ const ServiceThumbnail = ({ service }: ServiceThumbnailProps) => {
         <p className="text-gray-300 text-sm mb-2 line-clamp-2">{thumbnailContent.description}</p>
         <div className="flex items-center justify-between">
           <span className="text-xs text-gray-400">{service.division}</span>
-          <span className="text-xs text-primary bg-white/20 px-2 py-1 rounded">
-            Learn More
-          </span>
+        
         </div>
       </div>
     </motion.div>
@@ -647,24 +648,31 @@ const Services = () => {
   const services = [
     {
       id: 1,
-      title: 'E-Learning Video Content',
+      title: 'Technology & AI Solutions',
       description:
-        'High-quality video content for corporate training, educational institutions, and technology education.',
+        'Leverage artificial intelligence, machine learning, and data analytics to optimize operations, enhance decision-making, and unlock new opportunities.',
       icon: (
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-12 h-12"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
-          />
-        </svg>
+  xmlns="http://www.w3.org/2000/svg"
+  className="w-12 h-12"
+  viewBox="0 0 24 24"
+  fill="none"
+>
+  <defs>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stopColor="#2563eb" />  {/* blue-600 */}
+      <stop offset="100%" stopColor="#9333ea" /> {/* purple-600 */}
+    </linearGradient>
+  </defs>
+  <path
+    d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+    stroke="url(#grad2)"
+    strokeWidth={2}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+</svg>
+
       ),
       features: [
         'High-quality training video courses',
@@ -675,28 +683,37 @@ const Services = () => {
         'Technology and compliance training',
       ],
       division: 'KontentCreate',
-      type: 'WO-Contract based / Stock Sale'
+      type: <span className=" text-gray-600">
+  WO-Contract based / Stock Sale
+</span>
     },
     {
       id: 2,
-      title: 'Interactive E-Learning',
+      title: 'SaaS Product Development',
       description:
-        'SCORM compliant courses with interactive elements that seamlessly integrate with your existing learning management systems.',
+        'Cloud-native, secure, and scalable platforms tailored to your business requirements.',
       icon: (
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-12 h-12"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-          />
-        </svg>
+  xmlns="http://www.w3.org/2000/svg"
+  className="w-12 h-12"
+  viewBox="0 0 24 24"
+  fill="none"
+>
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stopColor="#2563eb" />  {/* blue-600 */}
+      <stop offset="100%" stopColor="#9333ea" /> {/* purple-600 */}
+    </linearGradient>
+  </defs>
+  <path
+    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+    stroke="url(#grad1)"
+    strokeWidth={2}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+</svg>
+
       ),
       features: [
         'SCORM compliant courses',
@@ -707,28 +724,35 @@ const Services = () => {
         'Enhanced learning experiences',
       ],
       division: 'KontentCreate',
-      type: 'WO-Contract based'
+      type: <span className=" text-gray-600">WO-Contract based</span>
     },
     {
       id: 3,
-      title: 'Corporate Training Solutions',
+      title: 'eLearning Solutions',
       description:
-        'Comprehensive consulting services for learning and development, including needs assessment and implementation support.',
+        'Interactive and personalized learning platforms designed for modern learners.',
       icon: (
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-12 h-12"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-          />
-        </svg>
+  xmlns="http://www.w3.org/2000/svg"
+  className="w-12 h-12"
+  viewBox="0 0 24 24"
+  fill="none"
+>
+  <defs>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stopColor="#2563eb" />  {/* blue-600 */}
+      <stop offset="100%" stopColor="#9333ea" /> {/* purple-600 */}
+    </linearGradient>
+  </defs>
+  <path
+    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+    stroke="url(#grad3)"
+    strokeWidth={2}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+</svg>
+
       ),
       features: [
         'Needs assessment',
@@ -739,7 +763,7 @@ const Services = () => {
         'Learning culture development',
       ],
       division: 'ACPL',
-      type: 'Consulting based'
+      type: <span className=" text-gray-600">Consulting based</span>
     },
     {
       id: 4,
@@ -748,19 +772,26 @@ const Services = () => {
         'Immersive learning experiences with Augmented Reality, Virtual Reality, and 360° content for simulated training.',
       icon: (
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-12 h-12"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-          />
-        </svg>
+  xmlns="http://www.w3.org/2000/svg"
+  className="w-12 h-12"
+  viewBox="0 0 24 24"
+  fill="none"
+>
+  <defs>
+    <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stopColor="#2563eb" />  {/* blue-600 */}
+      <stop offset="100%" stopColor="#9333ea" /> {/* purple-600 */}
+    </linearGradient>
+  </defs>
+  <path
+    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+    stroke="url(#grad4)"
+    strokeWidth={2}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+</svg>
+
       ),
       features: [
         'Augmented Reality (AR) content',
@@ -771,28 +802,35 @@ const Services = () => {
         'Real-life scenario simulations',
       ],
       division: 'VIRA',
-      type: 'WO basis AR/VR/Real-Blend'
+      type: <span className=" text-gray-600">WO basis AR/VR/Real-Blend</span>
     },
     {
       id: 5,
-      title: 'SaaS Applications',
+      title: 'Creative & Digital Servicess',
       description:
-        'Software-as-a-Service application development including cloud-based solutions, subscription platforms, multi-tenant architectures, and scalable web applications.',
+        'High-impact design, branding, and multimedia that align with your business objectives.',
       icon: (
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-12 h-12"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"
-          />
-        </svg>
+  xmlns="http://www.w3.org/2000/svg"
+  className="w-12 h-12"
+  fill="none"
+  viewBox="0 0 24 24"
+>
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stopColor="#2563EB" />  {/* blue-600 */}
+      <stop offset="100%" stopColor="#8B5CF6" /> {/* purple-600 */}
+    </linearGradient>
+  </defs>
+  <path
+    stroke="url(#grad1)"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={2}
+    d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"
+  />
+</svg>
+
       ),
       features: [
         'Cloud-native SaaS platforms',
@@ -805,28 +843,35 @@ const Services = () => {
         'Analytics and reporting dashboards',
       ],
       division: 'ACPL',
-      type: 'Technology Services'
+      type: <span className=" text-gray-600">Technology Services</span>
     },
     {
       id: 6,
-      title: 'Greenfield Projects',
+      title: 'Process Automation',
       description:
-        'Ground-up development of new systems and applications from scratch, including greenfield enterprise solutions, startup MVPs, and innovative technology implementations built from the foundation up.',
+        'Reduce errors, save time, and enhance productivity with intelligent automation.',
       icon: (
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-12 h-12"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
-          />
-        </svg>
+  xmlns="http://www.w3.org/2000/svg"
+  className="w-12 h-12"
+  fill="none"
+  viewBox="0 0 24 24"
+>
+  <defs>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stopColor="#2563EB" />  {/* blue-600 */}
+      <stop offset="100%" stopColor="#8B5CF6" /> {/* purple-600 */}
+    </linearGradient>
+  </defs>
+  <path
+    stroke="url(#grad2)"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={2}
+    d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+  />
+</svg>
+
       ),
       features: [
         'New system architecture from scratch',
@@ -839,7 +884,7 @@ const Services = () => {
         'Innovation-focused development approach',
       ],
       division: 'ACPL',
-      type: 'Technology Services'
+      type: <span className=" text-gray-600">Technology Services</span>
     },
   ];
 
@@ -949,17 +994,20 @@ const Services = () => {
       structuredData={servicesStructuredData}
     >
       {/* Hero Section */}
-      <section className="relative pt-6 pb-20 bg-dark text-white">
-        <div className="container">
-          <Breadcrumb className="text-white/90" />
-          <div className="max-w-2xl mx-auto text-center">
-            <h1 className="mb-6 text-4xl font-bold md:text-5xl">Our Services</h1>
-            <p className="text-xl">
-              Comprehensive Solutions to Fuel Your Growth
-            </p>
-          </div>
-        </div>
-      </section>
+<section
+  className="relative min-h-[200px] pt-6 pb-20 text-white bg-cover bg-center"
+  style={{ backgroundImage: `url(${bgImage})` }}
+>
+  <div className="absolute inset-0 " />
+  <div className="relative container">
+    <Breadcrumb className="text-white/90" />
+    <div className="max-w-2xl mx-auto text-center">
+      <h1 className="mb-6 text-4xl font-bold md:text-5xl">Our Services</h1>
+      <p className="text-xl">Comprehensive Solutions to Fuel Your Growth</p>
+    </div>
+  </div>
+</section>
+
 
       {/* Services Overview */}
       <Section>
@@ -985,9 +1033,13 @@ const Services = () => {
                   {service.type}
                 </span>
               </div>
-              <a href={`#service-${service.id}`} className="text-primary hover:underline">
-                Learn More →
-              </a>
+              <a
+  href={`#service-${service.id}`}
+  className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hover:underline"
+>
+  Learn More →
+</a>
+
             </Card>
           ))}
         </div>
@@ -1026,7 +1078,7 @@ const Services = () => {
                 ))}
               </ul>
               <Link to="/contact">
-                <Button variant="primary">Request a Quote</Button>
+                <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2.5 rounded-full hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-200 flex items-center justify-center gap-2 font-medium">Request a Quote</button>
               </Link>
             </div>
             <div className="flex items-center justify-center">
@@ -1053,9 +1105,7 @@ const Services = () => {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {/* Step 1 */}
           <div className="relative p-6 bg-white rounded-lg shadow-md">
-            <div className="absolute flex items-center justify-center w-12 h-12 text-white rounded-full -top-6 -left-6 bg-primary">
-              <span className="text-xl font-bold">1</span>
-            </div>
+            
             <h3 className="mb-4 text-xl font-semibold">Needs Assessment</h3>
             <p className="text-gray-600">
               We begin by understanding your specific learning needs, audience, and objectives
@@ -1065,9 +1115,7 @@ const Services = () => {
 
           {/* Step 2 */}
           <div className="relative p-6 bg-white rounded-lg shadow-md">
-            <div className="absolute flex items-center justify-center w-12 h-12 text-white rounded-full -top-6 -left-6 bg-primary">
-              <span className="text-xl font-bold">2</span>
-            </div>
+            
             <h3 className="mb-4 text-xl font-semibold">Content Development</h3>
             <p className="text-gray-600">
               Our expert team creates engaging, interactive content tailored to your specific
@@ -1077,9 +1125,7 @@ const Services = () => {
 
           {/* Step 3 */}
           <div className="relative p-6 bg-white rounded-lg shadow-md">
-            <div className="absolute flex items-center justify-center w-12 h-12 text-white rounded-full -top-6 -left-6 bg-primary">
-              <span className="text-xl font-bold">3</span>
-            </div>
+            
             <h3 className="mb-4 text-xl font-semibold">Technology Integration</h3>
             <p className="text-gray-600">
               We integrate your content with appropriate technologies, whether it's SCORM-compliant
@@ -1089,9 +1135,7 @@ const Services = () => {
 
           {/* Step 4 */}
           <div className="relative p-6 bg-white rounded-lg shadow-md">
-            <div className="absolute flex items-center justify-center w-12 h-12 text-white rounded-full -top-6 -left-6 bg-primary">
-              <span className="text-xl font-bold">4</span>
-            </div>
+            
             <h3 className="mb-4 text-xl font-semibold">Implementation & Support</h3>
             <p className="text-gray-600">
               We deliver the final solution and provide ongoing support to ensure successful

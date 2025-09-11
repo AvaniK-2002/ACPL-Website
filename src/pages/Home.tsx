@@ -127,21 +127,16 @@ const Home = () => {
     {/* Website Development */}
     <StaggerItem>
       <motion.div whileHover={{ y: -10 }} transition={{ type: "spring", stiffness: 300 }}>
-        <Card hoverable className="p-6 h-full flex flex-col justify-between">
-          <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-primary/10 text-primary">
+        <Card hoverable className="p-6 h-full flex flex-col justify-between min-h-[320px]">
+          <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-blue-100 text-blue-600">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="w-8 h-8"
+              className="w-8 h-8 text-blue-600"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-              />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
           </div>
           <h3 className="mb-2 text-xl font-semibold">Technology & AI Solutions</h3>
@@ -155,21 +150,16 @@ const Home = () => {
     {/* Software Development */}
     <StaggerItem>
       <motion.div whileHover={{ y: -10 }} transition={{ type: "spring", stiffness: 300 }}>
-        <Card hoverable className="p-6 h-full flex flex-col justify-between">
-          <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-primary/10 text-primary">
+        <Card hoverable className="p-6 h-full flex flex-col justify-between min-h-[320px]">
+          <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-green-100 text-green-600">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="w-8 h-8"
+              className="w-8 h-8 text-green-600"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-              />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
             </svg>
           </div>
           <h3 className="mb-2 text-xl font-semibold">eLearning Development</h3>
@@ -183,21 +173,16 @@ const Home = () => {
     {/* Graphic Design */}
     <StaggerItem>
       <motion.div whileHover={{ y: -10 }} transition={{ type: "spring", stiffness: 300 }}>
-        <Card hoverable className="p-6 h-full flex flex-col justify-between">
-          <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-primary/10 text-primary">
+        <Card hoverable className="p-6 h-full flex flex-col justify-between min-h-[320px]">
+          <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-purple-100 text-purple-600">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="w-8 h-8"
+              className="w-8 h-8 text-purple-600"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-              />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
             </svg>
           </div>
           <h3 className="mb-2 text-xl font-semibold">Creative & Design Services</h3>
@@ -211,21 +196,16 @@ const Home = () => {
     {/* Video Editing */}
     <StaggerItem>
       <motion.div whileHover={{ y: -10 }} transition={{ type: "spring", stiffness: 300 }}>
-        <Card hoverable className="p-6 h-full flex flex-col justify-between">
-          <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-primary/10 text-primary">
+        <Card hoverable className="p-6 h-full flex flex-col justify-between min-h-[320px]">
+          <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-yellow-100 text-yellow-600">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="w-8 h-8"
+              className="w-8 h-8 text-yellow-600"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
-              />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
             </svg>
           </div>
           <h3 className="mb-2 text-xl font-semibold">Digital Transformation</h3>
@@ -239,6 +219,7 @@ const Home = () => {
 </Section>
 
 
+
       {/* About Section */}
       <Section>
         <div className="grid grid-cols-1 gap-8 md:gap-12 lg:grid-cols-2 items-center min-h-[500px]">
@@ -248,17 +229,17 @@ const Home = () => {
                 title="About Ajinkya Creatiion"
                 subtitle="We bridge the gap between quantity and quality in education and professional training."
               />
-              <p className="mb-6 text-gray-600 leading-relaxed">
+              <p className="mb-6 text-gray-600 leading-relaxed text-justify">
                 Founded in 2023, Ajinkya Creatiion Private Limited is dedicated to revolutionizing
                 education and training by creating interactive courses that empower schools, colleges,
                 businesses, and industries with high-quality, engaging learning experiences.
               </p>
-              <p className="mb-6 text-gray-600 leading-relaxed">
+              <p className="mb-6 text-gray-600 leading-relaxed text-justify">
                 Our mission is to leverage current technologies and deliver innovative services
                 in the form of tailor-made interactive video courses that make learning accessible
                 and effective for everyone.
               </p>
-              <p className="mb-8 text-gray-600 leading-relaxed">
+              <p className="mb-8 text-gray-600 leading-relaxed text-justify">
                 With our specialized divisions - KontentCreate, ACPL, VENUS, and VIRA - we provide
                 comprehensive solutions spanning e-learning, corporate training, consulting services,
                 AR/VR experiences, and cutting-edge technology development including website and software solutions.
@@ -269,7 +250,9 @@ const Home = () => {
                 className="inline-block"
               >
                 <Link to="/about">
-                  <Button variant="primary">Learn More About Us</Button>
+                  <Button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+    Learn More About Us
+  </Button>
                 </Link>
               </motion.div>
             </div>
@@ -277,114 +260,131 @@ const Home = () => {
           <FadeIn direction="right" delay={0.3}>
             <div className="flex items-center justify-center h-full">
               <motion.div
-                className="w-full min-h-[400px] md:min-h-[450px] bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg overflow-hidden p-6 md:p-8"
-                whileHover={{ scale: 1.02 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                <div className="h-full flex flex-col justify-between">
-                  {/* Header Section */}
-                  <motion.div
-                    className="text-center mb-6"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                  >
-                    <h3 className="text-xl font-bold text-gray-800 mb-2">Company at a Glance</h3>
-                    <p className="text-gray-600 text-sm">Driving innovation in education and technology</p>
-                  </motion.div>
+  className="w-full min-h-[400px] md:min-h-[450px] bg-bg-white/50 rounded-lg overflow-hidden p-6 "
+  whileHover={{ scale: 1.02 }}
+  transition={{ type: "spring", stiffness: 300 }}
+>
+  <div className="h-full flex flex-col justify-between bg-white/50 p-6 rounded-2xl ">
+    {/* Header Section */}
+    <motion.div
+      className="text-center mb-6"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+    >
+      <h3 className="text-xl font-bold text-gray-800 mb-2">Company at a Glance</h3>
+      <p className="text-gray-600 text-sm">
+        Driving innovation in education and technology
+      </p>
+    </motion.div>
+  
 
-                  {/* Company Stats Grid */}
-                  <div className="grid grid-cols-2 gap-4 md:gap-6 mb-6">
-                    {/* Founded Year */}
-                    <motion.div
-                      className="text-center p-3 bg-white/50 rounded-lg backdrop-blur-sm"
-                      whileHover={{ y: -5, scale: 1.05 }}
-                      transition={{ type: "spring", stiffness: 300 }}
-                    >
-                      <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-2 bg-primary/20 rounded-full flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 md:w-8 md:h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                        </svg>
-                      </div>
-                      <div className="text-xl md:text-2xl font-bold text-primary">
-                        <AnimatedCounter end={2023} duration={1.5} />
-                      </div>
-                      <p className="text-xs text-gray-600 font-medium">Founded</p>
-                    </motion.div>
+    {/* Company Stats Grid */}
+    <div className="grid grid-cols-2 gap-4 md:gap-6 mb-6">
+      {/* Founded Year */}
+      <motion.div
+        className="text-center p-3 bg-blue-50/80 rounded-lg backdrop-blur-sm shadow-md"
+        whileHover={{ y: -5, scale: 1.05 }}
+        transition={{ type: "spring", stiffness: 300 }}
+      >
+        <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-2 bg-blue-100 rounded-full flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 md:w-8 md:h-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor ">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+        </div>
+        <div className="text-xl md:text-2xl font-bold text-primary">
+          <AnimatedCounter end={2023} duration={1.5} />
+        </div>
+        <p className="text-xs text-gray-600 font-medium">Founded</p>
+      </motion.div>
 
-                    {/* Divisions Count */}
-                    <motion.div
-                      className="text-center p-3 bg-white/50 rounded-lg backdrop-blur-sm"
-                      whileHover={{ y: -5, scale: 1.05 }}
-                      transition={{ type: "spring", stiffness: 300 }}
-                    >
-                      <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-2 bg-secondary/20 rounded-full flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 md:w-8 md:h-8 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                        </svg>
-                      </div>
-                      <div className="text-xl md:text-2xl font-bold text-secondary">
-                        <AnimatedCounter end={4} duration={1} />
-                      </div>
-                      <p className="text-xs text-gray-600 font-medium">Divisions</p>
-                    </motion.div>
+      {/* Divisions Count */}
+      <motion.div
+        className="text-center p-3 bg-green-50/80 rounded-lg backdrop-blur-sm shadow-md"
+        whileHover={{ y: -5, scale: 1.05 }}
+        transition={{ type: "spring", stiffness: 300 }}
+      >
+        <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-2 bg-green-100 rounded-full flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 md:w-8 md:h-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+          </svg>
+        </div>
+        <div className="text-xl md:text-2xl font-bold text-gray/400">
+          <AnimatedCounter end={4} duration={1} />
+        </div>
+        <p className="text-xs text-gray-600 font-medium">Divisions</p>
+      </motion.div>
 
-                    {/* Services Count */}
-                    <motion.div
-                      className="text-center p-3 bg-white/50 rounded-lg backdrop-blur-sm"
-                      whileHover={{ y: -5, scale: 1.05 }}
-                      transition={{ type: "spring", stiffness: 300 }}
-                    >
-                      <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-2 bg-primary/20 rounded-full flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 md:w-8 md:h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 01 3.138-3.138z" />
-                        </svg>
-                      </div>
-                      <div className="text-xl md:text-2xl font-bold text-primary">
-                        <AnimatedCounter end={6} duration={1} suffix="+" />
-                      </div>
-                      <p className="text-xs text-gray-600 font-medium">Services</p>
-                    </motion.div>
+      {/* Services Count */}
+      <motion.div
+        className="text-center p-3 bg-yellow-50/80 rounded-lg backdrop-blur-sm shadow-md"
+        whileHover={{ y: -5, scale: 1.05 }}
+        transition={{ type: "spring", stiffness: 300 }}
+      >
+        <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-2 bg-yellow-100 rounded-full flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 md:w-8 md:h-8 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 01 3.138-3.138z" />
+          </svg>
+        </div>
+        <div className="text-xl md:text-2xl font-bold text-primary">
+          <AnimatedCounter end={6} duration={1} suffix="+" />
+        </div>
+        <p className="text-xs text-gray-600 font-medium">Services</p>
+      </motion.div>
 
-                    {/* Innovation Focus */}
-                    <motion.div
-                      className="text-center p-3 bg-white/50 rounded-lg backdrop-blur-sm"
-                      whileHover={{ y: -5, scale: 1.05 }}
-                      transition={{ type: "spring", stiffness: 300 }}
-                    >
-                      <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-2 bg-secondary/20 rounded-full flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 md:w-8 md:h-8 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                        </svg>
-                      </div>
-                      <div className="text-xl md:text-2xl font-bold text-secondary">
-                        <AnimatedCounter end={100} duration={2} suffix="%" />
-                      </div>
-                      <p className="text-xs text-gray-600 font-medium">Innovation</p>
-                    </motion.div>
-                  </div>
+      {/* Innovation Focus */}
+      <motion.div
+        className="text-center p-3 bg-purple-50/80 rounded-lg backdrop-blur-sm shadow-md"
+        whileHover={{ y: -5, scale: 1.05 }}
+        transition={{ type: "spring", stiffness: 300 }}
+      >
+        <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-2 bg-purple-100 rounded-full flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 md:w-8 md:h-8 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        </div>
+        <div className="text-xl md:text-2xl font-bold text-primary ">
+          <AnimatedCounter end={100} duration={2} suffix="%" />
+        </div>
+        <p className="text-xs text-gray-600 font-medium">Innovation</p>
+      </motion.div>
+    </div>
 
-                  {/* Company Mission */}
-                  <motion.div
-                    className="text-center p-4 bg-white/30 rounded-lg backdrop-blur-sm"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.5, duration: 0.6 }}
-                  >
-                    <h3 className="text-lg md:text-xl font-bold text-gray-800 mb-2">Bridging Quality & Innovation</h3>
-                    <p className="text-gray-600 text-sm md:text-base">Transforming education through technology and creative learning solutions</p>
+    {/* Company Mission */}
+    <div className="max-w-2xl mx-auto">
+  <motion.div
+    className="text-center p-6 bg-purple-100 rounded-xl backdrop-blur-sm shadow-lg"
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ delay: 0.5, duration: 0.6 }}
+  >
+    <h3 className="text-lg md:text-xl font-bold text-gray-800 mb-2">
+      Bridging Quality & Innovation
+    </h3>
+    <p className="text-gray-600 text-sm md:text-base">
+      Transforming education through technology and creative learning solutions
+    </p>
 
-                    {/* Key Values */}
-                    <div className="flex justify-center items-center mt-3 space-x-4 text-xs md:text-sm">
-                      <span className="px-2 py-1 bg-primary/20 text-primary rounded-full font-medium">Excellence</span>
-                      <span className="px-2 py-1 bg-secondary/20 text-secondary rounded-full font-medium">Innovation</span>
-                      <span className="px-2 py-1 bg-primary/20 text-primary rounded-full font-medium">Quality</span>
-                    </div>
-                  </motion.div>
-                </div>
-              </motion.div>
+    {/* Key Values */}
+    <div className="flex justify-center items-center mt-4 flex-wrap gap-3 text-xs md:text-sm">
+      <span className="px-3 py-1 bg-blue-400 text-white rounded-full font-medium shadow-sm">
+        Excellence
+      </span>
+      <span className="px-3 py-1 bg-yellow-400 text-white rounded-full font-medium shadow-sm">
+        Innovation
+      </span>
+      <span className="px-3 py-1 bg-green-400 text-white rounded-full font-medium shadow-sm">
+        Quality
+      </span>
+    </div>
+  </motion.div>
+</div>
+
+  </div>
+</motion.div>
+
             </div>
           </FadeIn>
         </div>
@@ -399,117 +399,115 @@ const Home = () => {
             centered
           />
         </FadeIn>
-        <StaggerContainer className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-          {/* Division 1 - KontentCreate */}
-          <StaggerItem>
-            <Card className="overflow-hidden">
-              {/* Division Image */}
-              <div className="relative h-48 overflow-hidden">
-                <img
-                  src={kontentCreateLogo}
-                  alt="KontentCreate division logo representing ACPL's video content creation and interactive e-learning solutions for corporate training"
-                  className="w-full h-full object-contain bg-gradient-to-br from-primary/10 to-primary/5 p-4"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-              </div>
-              <div className="p-6">
-                <div className="mb-4">
-                  <h4 className="font-semibold">KontentCreate</h4>
-                  <p className="text-sm text-gray-500">Video Content Creation</p>
-                </div>
-                <p className="text-gray-600">
-                  Specializing in high-quality video content creation services, including interactive
-                  e-learning videos, microlearnings, compliance training, and SCORM-compliant courses.
-                  Our team ensures quick project delivery with exceptional quality.
-                </p>
-              </div>
-            </Card>
-          </StaggerItem>
+        <StaggerContainer className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 items-stretch auto-rows-fr">
+    
+    {/* Division 1 - KontentCreate */}
+    <StaggerItem className="h-full">
+      {/* ✅ added h-full flex flex-col */}
+      <Card className="overflow-hidden h-full flex flex-col">
+        <div className="relative h-48 overflow-hidden">
+          <img
+            src={kontentCreateLogo}
+            alt="KontentCreate division logo representing ACPL's video content creation and interactive e-learning solutions for corporate training"
+            className="w-full h-full object-contain bg-gradient-to-br from-primary/10 to-primary/5 p-4"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+        </div>
+        {/* ✅ make content grow to fill */}
+        <div className="p-6 flex flex-col flex-1">
+          <div className="mb-4">
+            <h4 className="font-semibold">KontentCreate</h4>
+            <p className="text-sm text-gray-500">Video Content Creation</p>
+          </div>
+          <p className="text-gray-600">
+            Specializing in high-quality video content creation services, including interactive
+            e-learning videos, microlearnings, compliance training, and SCORM-compliant courses.
+            Our team ensures quick project delivery with exceptional quality.
+          </p>
+        </div>
+      </Card>
+    </StaggerItem>
 
-          {/* Division 2 - ACPL */}
-          <StaggerItem>
-            <Card className="overflow-hidden">
-              {/* Division Image */}
-              <div className="relative h-48 overflow-hidden">
-                <img
-                  src={acplLogo}
-                  alt="ACPL main division logo representing Ajinkya Creatiion's consulting and technology services for learning and development solutions"
-                  className="w-full h-full object-contain bg-gradient-to-br from-secondary/10 to-secondary/5 p-4"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-              </div>
-              <div className="p-6">
-                <div className="mb-4">
-                  <h4 className="font-semibold">ACPL</h4>
-                  <p className="text-sm text-gray-500">Consulting & Technology Services</p>
-                </div>
-                <p className="text-gray-600">
-                  Our core division provides comprehensive learning and development consulting alongside
-                  cutting-edge technology services. From training design and implementation to website
-                  development and custom software solutions, ACPL delivers end-to-end business solutions.
-                </p>
-              </div>
-            </Card>
-          </StaggerItem>
+    {/* Division 2 - ACPL */}
+    <StaggerItem className="h-full">
+      <Card className="overflow-hidden h-full flex flex-col">
+        <div className="relative h-48 overflow-hidden">
+          <img
+            src={acplLogo}
+            alt="ACPL main division logo representing Ajinkya Creatiion's consulting and technology services for learning and development solutions"
+            className="w-full h-full object-contain bg-gradient-to-br from-secondary/10 to-secondary/5 p-4"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+        </div>
+        <div className="p-6 flex flex-col flex-1">
+          <div className="mb-4">
+            <h4 className="font-semibold">ACPL</h4>
+            <p className="text-sm text-gray-500">Consulting & Technology Services</p>
+          </div>
+          <p className="text-gray-600">
+            Our core division provides comprehensive learning and development consulting alongside
+            cutting-edge technology services. From training design and implementation to website
+            development and custom software solutions, ACPL delivers end-to-end business solutions.
+          </p>
+        </div>
+      </Card>
+    </StaggerItem>
 
-          {/* Division 3 - VENUS */}
-          <StaggerItem>
-            <Card className="overflow-hidden">
-              {/* Division Image */}
-              <div className="relative h-48 overflow-hidden">
-                <img
-                  src={venusLogo}
-                  alt="VENUS division logo representing ACPL's learning applications and SCORM authoring tools with AI support for e-learning platforms"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-              </div>
-              <div className="p-6">
-                <div className="mb-4">
-                  <h4 className="font-semibold">VENUS</h4>
-                  <p className="text-sm text-gray-500">Learning Applications</p>
-                </div>
-                <p className="text-gray-600">
-                  Our technology division develops subscription-based learning applications,
-                  including SCORM authoring tools with AI support, blended conferencing systems,
-                  and specialized training platforms. We make content creation and delivery simple.
-                </p>
-              </div>
-            </Card>
-          </StaggerItem>
+    {/* Division 3 - VENUS */}
+    <StaggerItem className="h-full">
+      <Card className="overflow-hidden h-full flex flex-col">
+        <div className="relative h-48 overflow-hidden">
+          <img
+            src={venusLogo}
+            alt="VENUS division logo representing ACPL's learning applications and SCORM authoring tools with AI support for e-learning platforms"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+        </div>
+        <div className="p-6 flex flex-col flex-1">
+          <div className="mb-4">
+            <h4 className="font-semibold">VENUS</h4>
+            <p className="text-sm text-gray-500">Learning Applications</p>
+          </div>
+          <p className="text-gray-600">
+            Our technology division develops subscription-based learning applications,
+            including SCORM authoring tools with AI support, blended conferencing systems,
+            and specialized training platforms. We make content creation and delivery simple.
+          </p>
+        </div>
+      </Card>
+    </StaggerItem>
 
-          {/* Division 4 - VIRA */}
-          <StaggerItem>
-            <Card className="overflow-hidden">
-              {/* Division Image */}
-              <div className="relative h-48 overflow-hidden">
-                <img
-                  src={viraLogo}
-                  alt="VIRA division logo representing ACPL's Augmented Reality, Virtual Reality and immersive content creation for training simulations"
-                  className="w-full h-full object-contain bg-gradient-to-br from-secondary/10 to-secondary/5 p-4"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-              </div>
-              <div className="p-6">
-                <div className="mb-4">
-                  <h4 className="font-semibold">VIRA</h4>
-                  <p className="text-sm text-gray-500">AR/VR & Immersive Content</p>
-                </div>
-                <p className="text-gray-600">
-                  Our immersive technology division specializes in Augmented Reality (AR), Virtual Reality (VR),
-                  and 360° content creation. VIRA delivers cutting-edge training simulations, virtual labs,
-                  and real-life scenario experiences for enhanced learning outcomes.
-                </p>
-              </div>
-            </Card>
-          </StaggerItem>
-        </StaggerContainer>
-      </Section>
-
+    {/* Division 4 - VIRA */}
+    <StaggerItem className="h-full">
+      <Card className="overflow-hidden h-full flex flex-col">
+        <div className="relative h-48 overflow-hidden">
+          <img
+            src={viraLogo}
+            alt="VIRA division logo representing ACPL's Augmented Reality, Virtual Reality and immersive content creation for training simulations"
+            className="w-full h-full object-contain bg-gradient-to-br from-secondary/10 to-secondary/5 p-4"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+        </div>
+        <div className="p-6 flex flex-col flex-1">
+          <div className="mb-4">
+            <h4 className="font-semibold">VIRA</h4>
+            <p className="text-sm text-gray-500">AR/VR & Immersive Content</p>
+          </div>
+          <p className="text-gray-600">
+            Our immersive technology division specializes in Augmented Reality (AR), Virtual Reality (VR),
+            and 360° content creation. VIRA delivers cutting-edge training simulations, virtual labs,
+            and real-life scenario experiences for enhanced learning outcomes.
+          </p>
+        </div>
+      </Card>
+    </StaggerItem>
+  </StaggerContainer>
+</Section>
       {/* Featured Work Section */}
       <Section>
         <FadeIn>
@@ -534,13 +532,9 @@ const Home = () => {
                     className="w-full h-full object-cover"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  <div className="absolute bottom-4 right-4">
-                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
-                      1
-                    </div>
+                  
                   </div>
-                </div>
+                
                 <div className="p-6">
                   <h3 className="mb-2 text-xl font-semibold">Needs Assessment</h3>
                   <p className="mb-4 text-gray-600">
@@ -569,12 +563,7 @@ const Home = () => {
                     className="w-full h-full object-cover"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  <div className="absolute bottom-4 right-4">
-                    <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
-                      2
-                    </div>
-                  </div>
+                  
                 </div>
                 <div className="p-6">
                   <h3 className="mb-2 text-xl font-semibold">Content Development</h3>
@@ -604,12 +593,7 @@ const Home = () => {
                     className="w-full h-full object-cover"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  <div className="absolute bottom-4 right-4">
-                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
-                      3
-                    </div>
-                  </div>
+                  
                 </div>
                 <div className="p-6">
                   <h3 className="mb-2 text-xl font-semibold">Implementation & Support</h3>
@@ -627,7 +611,7 @@ const Home = () => {
         </StaggerContainer>
         <div className="mt-12 text-center">
           <Link to="/services">
-            <Button variant="primary">Explore Our Services</Button>
+            <Button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">Explore Our Services</Button>
           </Link>
         </div>
       </Section>
@@ -649,7 +633,7 @@ const Home = () => {
               className="inline-block"
             >
               <Link to="/contact">
-                <Button variant="secondary" size="lg">
+                <Button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
                   Contact Us Now
                 </Button>
               </Link>
