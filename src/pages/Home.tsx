@@ -509,112 +509,117 @@ const Home = () => {
   </StaggerContainer>
 </Section>
       {/* Featured Work Section */}
-      <Section>
-        <FadeIn>
-          <SectionTitle
-            title="Our Approach"
-            subtitle="How we deliver exceptional learning experiences"
-            centered
-          />
-        </FadeIn>
-        <StaggerContainer className="grid grid-cols-1 gap-8 md:grid-cols-3">
-          {/* Approach Step 1 */}
-          <StaggerItem>
-            <motion.div
-              whileHover={{ y: -10 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              <Card className="overflow-hidden">
-                <div className="relative w-full h-48 overflow-hidden">
-                  <img
-                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop&crop=center"
-                    alt="ACPL team conducting professional business consultation for learning needs assessment and e-learning project requirements"
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                  
-                  </div>
-                
-                <div className="p-6">
-                  <h3 className="mb-2 text-xl font-semibold">Needs Assessment</h3>
-                  <p className="mb-4 text-gray-600">
-                    We begin by understanding your specific learning needs, audience, and objectives
-                    through detailed consultations and research.
-                  </p>
-                  <Link to="/services">
-                    <Button variant="outline">Learn More</Button>
-                  </Link>
-                </div>
-              </Card>
-            </motion.div>
-          </StaggerItem>
+<Section>
+  <FadeIn>
+    <SectionTitle
+      title="Our Approach"
+      subtitle="How we deliver exceptional learning experiences"
+      centered
+    />
+  </FadeIn>
 
-          {/* Approach Step 2 */}
-          <StaggerItem>
-            <motion.div
-              whileHover={{ y: -10 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              <Card className="overflow-hidden">
-                <div className="relative w-full h-48 overflow-hidden">
-                  <img
-                    src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop&crop=center"
-                    alt="Creative content development process showing video production, design work, and interactive e-learning content creation"
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                  
-                </div>
-                <div className="p-6">
-                  <h3 className="mb-2 text-xl font-semibold">Content Development</h3>
-                  <p className="mb-4 text-gray-600">
-                    Our expert team creates engaging, interactive content tailored to your specific
-                    requirements, incorporating the latest learning methodologies.
-                  </p>
-                  <Link to="/services">
-                    <Button variant="outline">Learn More</Button>
-                  </Link>
-                </div>
-              </Card>
-            </motion.div>
-          </StaggerItem>
+  {/* Equal-height cards */}
+  <StaggerContainer className="grid grid-cols-1 gap-8 md:grid-cols-3 items-stretch">
+    {/* Approach Step 1 */}
+    <StaggerItem>
+      <motion.div
+        whileHover={{ y: -10 }}
+        transition={{ type: "spring", stiffness: 300 }}
+        className="h-full"
+      >
+        <Card className="overflow-hidden flex flex-col h-full">
+          <div className="relative w-full h-48 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop&crop=center"
+              alt="ACPL team conducting professional business consultation for learning needs assessment and e-learning project requirements"
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div className="p-6 flex flex-col flex-grow">
+            <h3 className="mb-2 text-xl font-semibold">Needs Assessment</h3>
+            <p className="mb-4 text-gray-600 flex-grow">
+              We begin by understanding your specific learning needs, audience, and objectives
+              through detailed consultations and research.
+            </p>
+            <Link to="/services">
+              <Button variant="outline">Learn More</Button>
+            </Link>
+          </div>
+        </Card>
+      </motion.div>
+    </StaggerItem>
 
-          {/* Approach Step 3 */}
-          <StaggerItem>
-            <motion.div
-              whileHover={{ y: -10 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              <Card className="overflow-hidden">
-                <div className="relative w-full h-48 overflow-hidden">
-                  <img
-                    src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=400&fit=crop&crop=center"
-                    alt="ACPL training implementation and ongoing support with professional team delivering learning solutions"
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                  
-                </div>
-                <div className="p-6">
-                  <h3 className="mb-2 text-xl font-semibold">Implementation & Support</h3>
-                  <p className="mb-4 text-gray-600">
-                    We deliver the final solution and provide ongoing support to ensure successful
-                    implementation and adoption across your organization.
-                  </p>
-                  <Link to="/services">
-                    <Button variant="outline">Learn More</Button>
-                  </Link>
-                </div>
-              </Card>
-            </motion.div>
-          </StaggerItem>
-        </StaggerContainer>
-        <div className="mt-12 text-center">
-          <Link to="/services">
-            <Button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">Explore Our Services</Button>
-          </Link>
-        </div>
-      </Section>
+    {/* Approach Step 2 */}
+    <StaggerItem>
+      <motion.div
+        whileHover={{ y: -10 }}
+        transition={{ type: "spring", stiffness: 300 }}
+        className="h-full"
+      >
+        <Card className="overflow-hidden flex flex-col h-full">
+          <div className="relative w-full h-48 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop&crop=center"
+              alt="Creative content development process showing video production, design work, and interactive e-learning content creation"
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div className="p-6 flex flex-col flex-grow">
+            <h3 className="mb-2 text-xl font-semibold">Content Development</h3>
+            <p className="mb-4 text-gray-600 flex-grow">
+              Our expert team creates engaging, interactive content tailored to your specific
+              requirements, incorporating the latest learning methodologies.
+            </p>
+            <Link to="/services">
+              <Button variant="outline">Learn More</Button>
+            </Link>
+          </div>
+        </Card>
+      </motion.div>
+    </StaggerItem>
+
+    {/* Approach Step 3 */}
+    <StaggerItem>
+      <motion.div
+        whileHover={{ y: -10 }}
+        transition={{ type: "spring", stiffness: 300 }}
+        className="h-full"
+      >
+        <Card className="overflow-hidden flex flex-col h-full">
+          <div className="relative w-full h-48 overflow-hidden">
+            <img
+              src="https://media.licdn.com/dms/image/v2/D4D12AQEaTxXUq77Vrg/article-cover_image-shrink_720_1280/B4DZinmUCvH4AI-/0/1755158496321?e=2147483647&v=beta&t=gV0QW0DNH0UDFU9-wvivn2keS-Ru8o2Xn9qbt-UdX_Q"
+              alt="ACPL training implementation and ongoing support with professional team delivering learning solutions"
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div className="p-6 flex flex-col flex-grow">
+            <h3 className="mb-2 text-xl font-semibold">Implementation & Support</h3>
+            <p className="mb-4 text-gray-600 flex-grow">
+              We deliver the final solution and provide ongoing support to ensure successful
+              implementation and adoption across your organization.
+            </p>
+            <Link to="/services">
+              <Button variant="outline">Learn More</Button>
+            </Link>
+          </div>
+        </Card>
+      </motion.div>
+    </StaggerItem>
+  </StaggerContainer>
+
+  <div className="mt-12 text-center">
+    <Link to="/services">
+      <Button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        Explore Our Services
+      </Button>
+    </Link>
+  </div>
+</Section>
+
 
       {/* CTA Section */}
       <Section bgColor="primary">

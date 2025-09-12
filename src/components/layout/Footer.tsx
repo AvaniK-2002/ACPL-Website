@@ -6,14 +6,16 @@ import {
   Linkedin, 
   Twitter, 
   Github,
-  ArrowRight
+  ArrowRight,
+  Youtube
 } from 'lucide-react';
 
 const Footer = () => {
   const socialLinks = [
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/company/ajinkya-creatiion-private-limited/', label: 'LinkedIn' },
     { icon: Twitter, href: '#', label: 'Twitter' },
     { icon: Github, href: '#', label: 'GitHub' },
+    { icon: Youtube, href: 'https://www.youtube.com/@kontentcreate', label: 'YouTube'},
   ];
 
   const quickLinks = [

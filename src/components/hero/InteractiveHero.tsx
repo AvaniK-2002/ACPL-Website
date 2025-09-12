@@ -1,5 +1,7 @@
 
-import { ArrowRight,  Sparkles, Brain, Rocket, Star } from 'lucide-react';
+import {  Sparkles, Brain, Rocket, Star } from 'lucide-react';
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -29,12 +31,13 @@ const Hero = () => {
             
             {/* Button Group */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full hover:shadow-xl hover:shadow-blue-500/25 transition-all duration-200 flex items-center justify-center gap-2 font-semibold text-lg">
-                Get Started
-                <ArrowRight size={20} />
-              </button>
-              
-            </div>
+  <Link to="/about">
+    <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full hover:shadow-xl hover:shadow-blue-500/25 transition-all duration-200 flex items-center justify-center gap-2 font-semibold text-lg">
+      Get Started
+      <ArrowRight size={20} />
+    </button>
+  </Link>
+</div>
           </div>
 
           {/* Right Column - Visual Elements */}

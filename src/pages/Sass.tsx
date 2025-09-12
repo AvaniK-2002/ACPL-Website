@@ -95,9 +95,9 @@ function StrategyPlanning() {
               ]}
             />
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">SaaS Products</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">SaSS Products</h1>
           <p className="text-lg md:text-xl opacity-90">
-            Scalable SaaS Platforms Built for the Future.
+            Scalable SaSS Platforms Built for the Future.
           </p>
         </div>
       </div>
@@ -184,7 +184,7 @@ function StrategyPlanning() {
 
         {/* CTA Button */}
         <div className="mt-16 text-center">
-          <button className="px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700 transition-colors duration-300">
+          <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700 transition-colors duration-300">
             Start Your Free Trial Today
           </button>
         </div>
